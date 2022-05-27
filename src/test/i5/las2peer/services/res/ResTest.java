@@ -114,6 +114,16 @@ public class ResTest {
     }
 
 
+    try {
+      ClientResponse result = c.sendRequest("GET", mainPath + "/three", "");
+      assertTrue(true); // change here
+      System.out.println("Result of 'test$HTTP_Method_Name$': " + result.getResponse().trim());
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+
+
 
   }
 
